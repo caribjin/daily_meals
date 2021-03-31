@@ -1,3 +1,4 @@
+import 'package:daily_meals/category_meals_page.dart';
 import 'package:flutter/material.dart';
 
 import 'categories_page.dart';
@@ -14,7 +15,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
-        // canvasColor: Color.fromRGBO(204, 246, 175, 1.0),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
           bodyText1: const TextStyle(
@@ -24,13 +24,14 @@ class MyApp extends StatelessWidget {
             color: Color.fromRGBO(20, 51, 51, 1),
           ),
           headline6: const TextStyle(
-            fontSize: 20,
+            fontSize: 17,
           ),
         ),
       ),
       initialRoute: '/',
       routes: {
         '/': (context) => CategoriesPage(),
+        '/meals': (context) => CategoryMealsPage(),
       },
     );
   }

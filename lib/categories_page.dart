@@ -23,17 +23,15 @@ class CategoriesPage extends StatelessWidget {
             mainAxisSpacing: 20,
           ),
           padding: const EdgeInsets.all(25),
-          children: DUMMY_CATEGORIES
-              .map(
-                (Category category) => CategoryItem(category: category),
-          )
-              .toList(),
+          children: DUMMY_CATEGORIES.map(
+            (Category category) {
+              return CategoryItem(
+                category: category,
+              );
+            },
+          ).toList(),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
