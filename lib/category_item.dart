@@ -17,9 +17,6 @@ class CategoryItem extends StatelessWidget {
           width: 1.5,
         ),
         gradient: RadialGradient(
-        // gradient: LinearGradient(
-        //   begin: Alignment.topLeft,
-        //   end: Alignment.bottomRight,
           center: Alignment.topLeft,
           radius: 1.5,
           colors: [
@@ -32,7 +29,7 @@ class CategoryItem extends StatelessWidget {
       child: Center(
         child: Text(
           category.title,
-          style: const TextStyle(
+          style: Theme.of(context).textTheme.headline6?.copyWith(
             color: Colors.white,
             shadows: [
               Shadow(
@@ -41,7 +38,6 @@ class CategoryItem extends StatelessWidget {
                 offset: Offset(2, 2),
               ),
             ],
-            fontWeight: FontWeight.bold,
           ),
         ),
       ),

@@ -12,39 +12,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Daily Meal',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
+        accentColor: Colors.amber,
+        // canvasColor: Color.fromRGBO(204, 246, 175, 1.0),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+          bodyText1: const TextStyle(
+            color: Color.fromRGBO(20, 51, 51, 1),
+          ),
+          bodyText2: const TextStyle(
+            color: Color.fromRGBO(20, 51, 51, 1),
+          ),
+          headline6: const TextStyle(
+            fontSize: 20,
+          ),
+        ),
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    final MediaQueryData mediaQuery = MediaQuery.of(context);
-    final appBar = AppBar(
-      title: Text('Daily Meal'),
-    );
-
-    return Scaffold(
-      appBar: appBar,
-      body: Container(
-        height: mediaQuery.size.height - appBar.preferredSize.height - mediaQuery.padding.top,
-        child: CategoriesPage(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      initialRoute: '/',
+      routes: {
+        '/': (context) => CategoriesPage(),
+      },
     );
   }
 }
