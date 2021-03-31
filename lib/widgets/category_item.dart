@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'category_meals_page.dart';
-import 'models/category.dart';
+import '../pages/category_meals_page.dart';
+import '../models/category.dart';
 
 class CategoryItem extends StatelessWidget {
   late final Category category;

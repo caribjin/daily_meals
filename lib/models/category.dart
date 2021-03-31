@@ -5,7 +5,11 @@ class Category {
   final String title;
   final Color color;
 
-  const Category({required this.id, required this.title, this.color = Colors.white});
+  const Category({
+    required this.id,
+    required this.title,
+    this.color = Colors.white,
+  });
 
   Map<String, dynamic> toJson() {
     var map = <String, dynamic>{};
