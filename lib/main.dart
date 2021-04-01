@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'pages/categories_page.dart';
 import 'pages/category_meals_page.dart';
 import 'pages/home_page.dart';
 import 'pages/meal_detail_page.dart';
+import 'pages/settings_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         '/meals': (context) => CategoryMealsPage(),
         '/meal': (context) => MealDetailPage(),
+        '/settings': (context) => SettingsPage(),
       },
     );
   }

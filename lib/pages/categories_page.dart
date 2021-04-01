@@ -8,10 +8,6 @@ import 'package:daily_meals/dummy_data.dart';
 class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final appBar = AppBar(
-      title: const Text('Daily Meal'),
-    );
-
     return Container(
       child: GridView(
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(

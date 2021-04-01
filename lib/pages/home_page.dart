@@ -1,3 +1,4 @@
+import 'package:daily_meals/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'categories_page.dart';
@@ -41,6 +42,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           FavoritesPage(),
         ],
       ),
+      drawer: MainDrawer(),
       bottomNavigationBar: Container(
         color: Theme.of(context).primaryColor,
         child: TabBar(

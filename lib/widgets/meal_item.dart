@@ -33,8 +33,9 @@ class MealItem extends StatelessWidget {
     }
   }
 
-  void _handlerSelectMeal(BuildContext context, Meal meal) {
-    Navigator.of(context).pushNamed('/meal', arguments: meal);
+  void _handlerSelectMeal(BuildContext context, Meal meal) async {
+    var result = await Navigator.of(context).pushNamed('/meal', arguments: meal);
+    print('>>>> $result');
   }
 
   @override
