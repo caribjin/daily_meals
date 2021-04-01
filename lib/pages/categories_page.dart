@@ -12,25 +12,22 @@ class CategoriesPage extends StatelessWidget {
       title: const Text('Daily Meal'),
     );
 
-    return Scaffold(
-      appBar: appBar,
-      body: Container(
-        child: GridView(
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-            childAspectRatio: 1.5,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 20,
-          ),
-          padding: const EdgeInsets.all(25),
-          children: DUMMY_CATEGORIES.map(
-            (Category category) {
-              return CategoryItem(
-                category: category,
-              );
-            },
-          ).toList(),
+    return Container(
+      child: GridView(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 1.5,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
         ),
+        padding: const EdgeInsets.all(25),
+        children: DUMMY_CATEGORIES.map(
+          (Category category) {
+            return CategoryItem(
+              category: category,
+            );
+          },
+        ).toList(),
       ),
     );
   }
